@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO 基本與 OpenGraph 標籤 -->
+  <title>台中第二市場｜百年風華，飄香在地的美食心臟</title>
+  <meta name="description" content="台中第二市場擁有百年歷史，匯聚王家菜頭粿、老賴紅茶、立偉麵食等經典美食。完整收錄市場簡介、攤位推薦、交通地圖與溫馨提醒。">
+  <meta name="keywords" content="台中第二市場, 台中美食, 王家菜頭粿, 老賴紅茶, 台中景點, 六角樓, 百年市場">
+  <meta name="author" content="李文彤">
+
+  <meta property="og:title" content="台中第二市場｜百年風華，飄香在地的美食心臟">
+  <meta property="og:description" content="走進百年六角樓，品嚐傳承三代的在地小吃。第二市場完整美食導覽與交通資訊。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/index.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="zh_TW">
+
+  <style>
+    /* ==========================================================================
+       1. Base CSS - 基礎設定、懷舊復古配色與 Reset
+       ========================================================================== */
+    :root {
+      --color-bg-cream: #FDFBF7;      /* 米白底色 */
+      --color-bg-card: #F4EFEB;       /* 淺米卡片底 */
+      --color-brick-red: #A33A2B;     /* 磚紅主色 */
+      --color-brick-dark: #82291C;    /* 深磚紅 */
+      --color-brown-yellow: #C68B59;  /* 黃棕輔助色 */
+      --color-wood-dark: #4A3525;     /* 深木褐字色 */
+      --color-text-main: #332720;     /* 主內文色 */
+      --color-border: #D8C8B8;        /* 邊框色 */
+
+      --font-family-base: "Noto Serif TC", "PingFang TC", "Traditional Chinese", "Microsoft JhengHei", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-family-base);
+      background-color: var(--color-bg-cream);
+      color: var(--color-text-main);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--color-brick-red);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--color-brick-dark);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    figure {
+      margin: 0 0 1rem 0;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: var(--color-wood-dark);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    small {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* ==========================================================================
+       2. Layout CSS - 二欄式 Grid 結構與頁面元件樣式
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--color-brick-red);
+      border-bottom: 3px solid var(--color-brown-yellow);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFF;
+      letter-spacing: 2px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .main-nav a {
+      color: #FDFBF7;
+      font-size: 1.05rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      background-color: var(--color-brown-yellow);
+      color: #FFF;
+    }
+
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger-btn span {
+      width: 25px;
+      height: 3px;
+      background-color: #FFF;
+      transition: all 0.3s ease;
+    }
+
+    .hero-banner {
+      background: linear-gradient(rgba(74, 53, 37, 0.7), rgba(74, 53, 37, 0.7)), 
+                  url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #FFF;
+      text-align: center;
+      padding: 4.5rem 1rem;
+      border-bottom: 4px solid var(--color-brick-red);
+    }
+
+    .hero-content h1 {
+      font-size: 2.2rem;
+      letter-spacing: 3px;
+      margin-bottom: 0.8rem;
+      color: #F4EFEB;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--color-brown-yellow);
+    }
+
+    .page-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 2rem;
+    }
+
+    .section-block {
+      background-color: #FFF;
+      padding: 1.8rem;
+      border-radius: 6px;
+      border: 1px solid var(--color-border);
+      margin-bottom: 2rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      color: var(--color-brick-red);
+      border-bottom: 2px dashed var(--color-brown-yellow);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .stall-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .stall-card {
+      background-color: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stall-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .stall-info {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .stall-info h3 {
+      color: var(--color-wood-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .stall-desc {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .stall-tag {
+      font-size: 0.85rem;
+      color: var(--color-brick-red);
+      font-weight: bold;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      margin: 1rem 0;
+      background-color: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .transport-list {
+      margin-bottom: 1.5rem;
+    }
+
+    .transport-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      text-indent: -1.2rem;
+    }
+
+    .map-box {
+      margin-top: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .map-frame {
+      width: 100%;
+      max-width: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .notice-box {
+      background-color: var(--color-bg-card);
+      border-left: 5px solid var(--color-brown-yellow);
+    }
+
+    .notice-box ul {
+      padding-left: 1.2rem;
+      list-style: disc;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sidebar-widget {
+      background-color: #FFF;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 1.2rem;
+    }
+
+    .widget-title {
+      font-size: 1.15rem;
+      color: var(--color-wood-dark);
+      border-bottom: 2px solid var(--color-brick-red);
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .info-list li, .anchor-list li {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer {
+      background-color: var(--color-wood-dark);
+      color: #D8C8B8;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-top: 3px solid var(--color-brown-yellow);
+    }
+
+    .footer p {
+      margin-bottom: 0.4rem;
+    }
+
+    .footer a {
+      color: var(--color-brown-yellow);
+      text-decoration: underline;
+    }
+
+    .footer a:hover {
+      color: #FFF;
+    }
+
+    /* ==========================================================================
+       3. Responsive CSS - 媒體查詢 Media Queries
+       ========================================================================== */
+    @media (max-width: 991px) {
+      .page-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .sidebar {
+        order: 2;
+      }
+
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hamburger-btn {
+        display: flex;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-brick-red);
+        border-bottom: 2px solid var(--color-brown-yellow);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+      }
+
+      .main-nav.is-active {
+        max-height: 300px;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        gap: 0.8rem;
+      }
+
+      .main-nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+
+      .hero-banner {
+        padding: 2.5rem 1rem;
+      }
+
+      .hero-content h1 {
+        font-size: 1.4rem;
+      }
+
+      .hero-content p {
+        font-size: 0.95rem;
+      }
+
+      .section-block {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky 頂部導覽列 -->
+  <header class="header" id="top">
+    <div class="header-container">
+      <a href="index.html" class="logo">台中第二市場</a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="切換選單">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active">首頁導覽</a></li>
+          <li><a href="#about">市場簡介</a></li>
+          <li><a href="#stalls">美食推薦</a></li>
+          <li><a href="#video">影音報導</a></li>
+          <li><a href="#location">交通地圖</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero 英雄區塊 -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>百年風華，飄香在地的美食心臟</h1>
+      <p>尋訪六角樓下的歲月故事，品嚐最道地的台中人情味</p>
+    </div>
+  </section>
+
+  <!-- 主要內容區（Grid 二欄佈局） -->
+  <div class="page-container">
+    
+    <!-- 主內容區 -->
+    <main class="main-content">
+      
+      <!-- 市場簡介與特色 -->
+      <section id="about" class="section-block">
+        <h2 class="section-title">市場基本簡介與特色</h2>
+        <div class="intro-box">
+          <p>台中第二市場興建於 1917 年（日治時期），舊稱「新富町市場」。市場以特殊的六角樓為中心，放射狀延伸出傳統通廊，是台灣現存極具歷史價值的傳統市場建築。</p>
+          <p>這裡不僅保留了濃厚的古蹟風采，更匯聚了數十家傳承數十載的經典老店。從傳統早點、魯肉飯到古早味紅茶，是所有造訪台中的饕客必去的文化與美食地標。</p>
+        </div>
+      </section>
+
+      <!-- 攤位推薦（Grid 自動彈性卡片） -->
+      <section id="stalls" class="section-block">
+        <h2 class="section-title">熱門攤位推薦</h2>
+        <div class="stall-grid">
+          
+          <article class="stall-card">
+            <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=600&q=80" alt="王家菜頭粿糯米腸" class="stall-img" loading="lazy">
+            <div class="stall-info">
+              <h3>王家菜頭粿糯米腸</h3>
+              <p class="stall-desc">道地古早味煎煎香氣，搭配特製甜辣醬與煎蛋，排隊人氣首選。</p>
+              <span class="stall-tag">攤位編號：中區三民路二段87號前</span>
+            </div>
+          </article>
+
+          <article class="stall-card">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="立偉麻醬館麵食" class="stall-img" loading="lazy">
+            <div class="stall-info">
+              <h3>立偉麻醬館麵食</h3>
+              <p class="stall-desc">獨門一麵吃得到花生醬與麻醬香氣，搭配豐富羹湯，口感層次豐富。</p>
+              <span class="stall-tag">攤位編號：N39號攤</span>
+            </div>
+          </article>
+
+          <article class="stall-card">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="老賴紅茶" class="stall-img" loading="lazy">
+            <div class="stall-info">
+              <h3>老賴紅茶總店</h3>
+              <p class="stall-desc">數十年堅持傳統炭焙工法，傳統紅茶與豆香濃郁的豆漿紅茶必點。</p>
+              <span class="stall-tag">攤位編號：C71號攤</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 影音報導區塊 -->
+      <section id="video" class="section-block">
+        <h2 class="section-title">影音報導與歷史紀錄</h2>
+        <p>透過下方影片認識第二市場。</p>
+        <figure>
+          <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vM3RfeXerN4?si=dsKPMi6MdHQWs0o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <figcaption>影片：【我在市場待了一整天】 EP6台中第二市場｜發布者：公視+。</figcaption>
+        </figure>
+        <p><a href="https://youtu.be/vM3RfeXerN4?si=TJHHrhPoUljbFgpE" target="_blank" rel="noopener noreferrer">在 YouTube 觀看第二市場的【我在市場待了一整天】 EP6台中第二市場 全家人的願望一次滿足（另開分頁）</a></p>
+        <p><small>影片為官方於四年前發布的影片，現場狀況請以最新官方資訊為準。</small></p>
+        <p><small>本機預覽請使用 Live Server；若直接開啟 HTML 出現錯誤 153，請改用 HTTP 預覽或上方 YouTube 連結。</small></p>
+      </section>
+
+      <!-- 市場位置與交通方式 -->
+      <section id="location" class="section-block">
+        <h2 class="section-title">市場位置與交通方式</h2>
+        
+        <div class="location-details">
+          <h3>交通指引</h3>
+          <ul class="transport-list">
+            <li><strong>高鐵轉乘：</strong>搭高鐵至台中站，轉乘台鐵區間車至「台中車站」，步行約 15 分鐘。</li>
+            <li><strong>公車前往：</strong>搭乘市區公車至「第二市場（三民路）」或「第二市場（台灣大道）」站下車即達。</li>
+            <li><strong>自行開車：</strong>可停放至周邊「興中停車場」或「光復國小外停車場」。</li>
+          </ul>
+
+          <h3>平面地圖</h3>
+          <div class="map-box">
+            <iframe
+              class="map-frame"
+              src="https://maps.google.com/maps?q=24.142103° N,120.679015° E&amp;z=16&amp;output=embed"
+              width="480"
+              height="360"
+              title="第二市場位置 Google 地圖"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- 溫馨提醒 -->
+      <section id="notice" class="section-block notice-box">
+        <h2 class="section-title">參觀溫馨提醒</h2>
+        <ul>
+          <li>市場多數人氣攤位營業時間為早晨至中午（約 07:00 - 14:00），建議提早前往。</li>
+          <li>部分老字號店家僅收現金，請準備適量零錢。</li>
+          <li>假日周邊停車位較緊張，建議多利用大眾運輸工具。</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- 側邊欄（260px 固寬） -->
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h3 class="widget-title">參觀基本資訊</h3>
+        <ul class="info-list">
+          <li><strong>開放時間：</strong> 07:00 – 20:00 (各攤位不同)</li>
+          <li><strong>休館日期：</strong> 週一（部分店家照常營業）</li>
+          <li><strong>地址：</strong> 台中市中區三民路二段87號</li>
+          <li><strong>電話：</strong> (04) 2225-4222</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3 class="widget-title">快速目錄錨點</h3>
+        <ul class="anchor-list">
+          <li><a href="#about">▪ 市場基本簡介</a></li>
+          <li><a href="#stalls">▪ 熱門攤位推薦</a></li>
+          <li><a href="#video">▪ 影音報導</a></li>
+          <li><a href="#location">▪ 交通地圖指引</a></li>
+          <li><a href="#notice">▪ 參觀溫馨提醒</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <p>&copy; 2026 台中第二市場數位導覽網｜懷舊古蹟．風華再現</p>
+    <p><small>作者：李文彤 · 製作日期：2026 年 11 月 5日</small></p>
+    <p><small>文字依來源整理；照片與影片權利屬原作者。</small></p>
+    <p><a href="#top">回到頁首</a></p>
+  </footer>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainNav = document.getElementById('mainNav');
+
+    hamburgerBtn.addEventListener('click', () => {
+      hamburgerBtn.classList.toggle('is-active');
+      mainNav.classList.toggle('is-active');
+    });
+  </script>
+
+</body>
+</html>
