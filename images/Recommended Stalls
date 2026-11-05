@@ -1,0 +1,31 @@
+<!-- 3. 攤位推薦 (含攤位照片) -->
+<section id="food">
+  <h2>熱門攤位推薦</h2>
+  <div class="food-grid">
+    
+    <article class="food-card">
+      <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=600&q=80" alt="王家菜頭粿糯米腸">
+      <h3>王家菜頭粿</h3>
+      <p>招牌菜頭粿煎至金黃焦香，搭配煎蛋與特製醬汁。攤位：三民路入口前。</p>
+    </article>
+
+    <article class="food-card">
+      <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="立偉麻醬館麵食">
+      <h3>立偉麻醬館</h3>
+      <p>一麵吃得到花生醬與麻醬雙重香氣，饕客必點。攤位：中區 N39 號攤。</p>
+    </article>
+
+    <article class="food-card">
+      <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="老賴紅茶">
+      <h3>老賴紅茶</h3>
+      <p>堅持傳統炭焙工法，傳統紅茶與豆漿紅茶遠近馳名。攤位：中區 C71 號攤。</p>
+    </article>
+
+    <article class="food-card">
+      <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="山河魯肉飯">
+      <h3>山河魯肉飯</h3>
+      <p>肉質軟嫩入味，古早味滷汁搭配鮮美湯品。攤位：中區 N41 號攤。</p>
+    </article>
+
+  </div>
+</section>
