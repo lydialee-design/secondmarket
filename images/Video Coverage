@@ -1,0 +1,12 @@
+<!-- 4. 影音報導 -->
+<section id="video">
+  <h2>影音報導與歷史紀錄</h2>
+  <p>透過下方影片認識第二市場。</p>
+  <figure>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vM3RfeXerN4?si=dsKPMi6MdHQWs0o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <figcaption>影片：【我在市場待了一整天】 EP6台中第二市場｜發布者：公視+。</figcaption>
+  </figure>
+  <p><a href="https://youtu.be/vM3RfeXerN4?si=TJHHrhPoUljbFgpE" target="_blank" rel="noopener noreferrer">在 YouTube 觀看第二市場的【我在市場待了一整天】 EP6台中第二市場 全家人的願望一次滿足（另開分頁）</a></p>
+  <p><small>影片為官方於四年前發布的影片，現場狀況請以最新官方資訊為準。</small></p>
+  <p><small>本機預覽請使用 Live Server；若直接開啟 HTML 出現錯誤 153，請改用 HTTP 預覽或上方 YouTube 連結。</small></p>
+</section>
