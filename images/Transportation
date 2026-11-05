@@ -1,0 +1,16 @@
+<!-- 6. 交通方式 -->
+<section id="transport">
+  <h2>交通方式指引</h2>
+  <div class="guide-grid">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1477959858617-67f30ac4ce78?auto=format&fit=crop&w=800&q=80" alt="交通指引">
+      <figcaption>照片：第二市場周邊交通指引。</figcaption>
+    </figure>
+    <div class="guide-text">
+      <h3>如何前往第二市場</h3>
+      <p><strong>高鐵轉乘：</strong>搭高鐵至台中站，轉乘台鐵區間車至「台中車站」，步行約 15 分鐘即可抵達。</p>
+      <p><strong>公車前往：</strong>搭乘市區公車至「第二市場（三民路）」或「第二市場（台灣大道）」站下車即達。</p>
+      <p><strong>自行開車：</strong>可停放至周邊「興中停車場」或「光復國小外停車場」。</p>
+    </div>
+  </div>
+</section>
